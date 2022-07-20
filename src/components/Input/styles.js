@@ -2,9 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   input: {
-    outlineStyle: 'none',
     borderRadius: 5,
-    height: 36,
+    height: 46,
     width: '100%',
     padding: 5
   },
