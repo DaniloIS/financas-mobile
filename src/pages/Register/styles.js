@@ -1,4 +1,6 @@
 import { StyleSheet } from 'react-native';
+import styled from 'styled-components';
+import { View } from 'react-native';
 
 export default StyleSheet.create({
   background: {
@@ -13,3 +15,9 @@ export default StyleSheet.create({
     gap: 20
   }
 })
+
+export const Container = styled.View`
+  alignItems: 'center';
+  marginHorizontal: 20;
+  gap: 20;
+`

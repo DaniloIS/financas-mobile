@@ -10,7 +10,7 @@ const Header = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <TouchableWithoutFeedback style={styles.btn} onPress={() => {}}>
+      <TouchableWithoutFeedback style={styles.btn} onPress={() => navigation.toggleDrawer()}>
         <Feather name="menu" size={30} color="#fff" />
       </TouchableWithoutFeedback>
     </View>

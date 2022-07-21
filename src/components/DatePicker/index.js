@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
-import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 import styles from './styles';
 
@@ -9,7 +9,7 @@ const DatePicker = () => {
 
   return (
     <View style={styles.container}>
-      <DateTimePickerAndroid
+      <DateTimePicker
         value={date}
         mode='date'
         display='default'

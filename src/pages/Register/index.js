@@ -11,7 +11,7 @@ import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { Picker } from '../../components/Picker/index.android';
 
-import styles from './styles';
+import styles, { Container } from './styles';
 
 const Register = () => {
   const navigation = useNavigation();
@@ -77,11 +77,11 @@ const Register = () => {
     <View style={styles.background}>
       <Header />
 
-      <SafeAreaView style={styles.container}>
+      <Container style={styles.container}>
         <Input placeholder='Valor desejado' bgColor='rgba(255,255,255,0.9)' type='numeric' color='#222' value={form.value} onChange={e => setForm({ ...form, value: e })} />
         <Picker onChange={value => setForm({ ...form, type: value})} type={form.type} />
         <Button label='Registrar' onClick={handleSubmit} />
-      </SafeAreaView>
+      </Container>
     </View>
     </TouchableWithoutFeedback>
   )

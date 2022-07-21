@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
   const [loadingAuth, setLoadingAuth] = useState(false);
 
@@ -14,11 +14,12 @@ function AuthProvider({ children }) {
       const storageUser = await AsyncStorage.getItem('Auth_user');
 
       if(storageUser) {
-        setUser(JSON.parse(storageUser))
-        setLoading(false)
+        console.log(JSON.parse(storageUser))
+        setUser(JSON.parse(storageUser));
+        setLoading(false);
       }
 
-      setLoading(false)
+      setLoading(false);
     }
 
     loadStorage();
@@ -38,7 +39,7 @@ function AuthProvider({ children }) {
           name: snapshot.val().name,
           email: res.user.email
         }
-        
+
         setUser(data);
         storageUser(data);
         setLoadingAuth(false);
